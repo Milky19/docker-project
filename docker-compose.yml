@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  movies:
+    image: hanvitha/mypythonlife-app:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+  train:
+    image: hanvitha/mymovies-app:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+  dth:
+    image: hanvitha/myphonepay-app:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+
